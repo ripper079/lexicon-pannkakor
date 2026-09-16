@@ -1,0 +1,92 @@
+:root {
+    /* Färg variabler */
+    --background-color-app: #31312f;
+    
+    
+    --font-color-base: #f8f8f2;
+    --font-color-nav: #d35400;
+    --font-color-nav-hover: #fbfbbc;
+    
+    --background-color-hightlight: #bd6b23;
+
+    /* Konstanter */ 
+    font-family: Calibri, Geneva, Tahoma, sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+body {    
+    background-color: var(--background-color-app);
+    color: var(--font-color-base);
+}
+
+header {
+    display: flex;                  /* Flexbox feature på */
+    justify-content: space-between; /* logo till vänster och navigation till höger */
+    align-items: center;            /* Centrera logan och nav i vertikal led */
+    padding: 16px 24px;             
+    background-color: var(--background-color-app);
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    /* display: block; */
+}
+
+nav {
+    display: flex;              /* Flexbox feature på */
+    justify-content: flex-end;  /* Tryck ut mot sidan */
+    gap: 32px;                  /* Mellan rum mellan nav texter */
+    padding: 16px;
+}
+
+nav > a {
+    font-size: 26px;            /* Font storlek nav */
+    color: var(--font-color-nav);
+    text-decoration: none;      /* Bort med fula underlines i nav */
+}
+
+nav > a:hover { 
+    color: var(--font-color-nav-hover);         /* Indikation(annan färg) när man hovrar över texten */
+}
+
+#hero-image {
+    width: 100%;
+}
+
+#intro > p {    
+    background-color: var(--background-color-hightlight);
+    border-radius: 2px;
+    padding: 8px;
+}
+
+/* Flexbox feature på pannkakor bilder */
+.flexbox-container {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4, 1fr);  /*  4 i rad */
+    gap: 8px;
+    padding: 0 8px;
+}
+
+/* 1:a  Brytpunkt */
+@media (max-width: 1024px) {
+    .flexbox-container {
+        grid-template-columns: repeat(2, 1fr);  /* 2 i rad  */
+    }
+}
+
+/* 2:a  Brytpunkt (Mobil) */
+@media (max-width: 600px) {
+    .flexbox-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.item > img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 4px;
+    display: block; 
+}
