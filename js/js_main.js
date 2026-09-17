@@ -16,7 +16,7 @@ selectElement.addEventListener('change', function() {
     // Hämta indexet för det valda alternativet (börjar på 0)
     const portionsIndex = this.selectedIndex;
 
-    document.getElementById('amount-wheet').innerText = receptKarta[portionsIndex][0];
+    document.getElementById('amount-wheat').innerText = receptKarta[portionsIndex][0];
     document.getElementById('amount-salt').innerText = receptKarta[portionsIndex][1];
     document.getElementById('amount-milk').innerText = receptKarta[portionsIndex][2];
     document.getElementById('amount-egg').innerText = receptKarta[portionsIndex][3];
