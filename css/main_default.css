@@ -1,8 +1,7 @@
 :root {
     /* Färg variabler */
     --background-color-app: #31312f;
-    
-    
+        
     --font-color-base: #f8f8f2;
     --font-color-nav: #d35400;
     --font-color-nav-hover: #fbfbbc;
@@ -60,8 +59,8 @@ nav > a:hover {
     padding: 8px;
 }
 
-/* Flexbox feature på pannkakor bilder */
-.flexbox-container {
+/* Grid Layout på pannkakor bilder */
+.servering-grid {
     display: grid;
     /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     grid-template-columns: repeat(4, 1fr);  /*  4 i rad */
@@ -71,14 +70,14 @@ nav > a:hover {
 
 /* 1:a  Brytpunkt */
 @media (max-width: 1024px) {
-    .flexbox-container {
+    .servering-grid {
         grid-template-columns: repeat(2, 1fr);  /* 2 i rad  */
     }
 }
 
 /* 2:a  Brytpunkt (Mobil) */
 @media (max-width: 600px) {
-    .flexbox-container {
+    .servering-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -86,7 +85,7 @@ nav > a:hover {
 .item > img {
     width: 100%;
     height: 100%; 
-    object-fit: cover;
+    object-fit: cover;      /* Undvik beskärning */
     border-radius: 4px;
     display: block; 
 }
